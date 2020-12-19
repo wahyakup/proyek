@@ -1,0 +1,487 @@
+/*---==================================START GLOBAL====================================---*/
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    font-size: 62.5%;
+    font-family: "Montserat", sans-serif;
+    scroll-behavior: smooth; 
+}
+:root{
+    --main-font-heading: #000000CC;
+    --main-font-paragraf: #000000B3;
+    --main-color-blue: #00B6FF;
+    --main-color-blue-hover: #39E2FF;
+    --main-color-white:#FFFFFF;
+    --main-color-black: #221e3f;
+    --main-color-gray: #e6e6e6;
+}
+main{
+    margin: 0 2rem;
+}
+article{
+    margin: 6rem auto;
+    text-align: center;
+}
+img {
+    width: 100%;
+   }
+h1{
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    color: var(--main-font-heading);
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+    line-height: 3rem;
+    padding-top: 4rem;
+}
+h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--main-font-heading);
+}
+p{
+    font-size: 1.8rem;
+    color: var(--main-font-paragraf);
+    font-weight: 300;
+    line-height: 2.7rem;
+    margin: 1rem auto;
+}
+a {
+    text-decoration: none;
+    color: var(--main-font-heading); 
+    }
+.heading-title{
+    margin: 2rem auto;   
+    } 
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin: 2rem auto;
+    background-color: var(--main-color-blue);
+     }  
+#content,
+aside {
+    width: 100%;
+    padding: 0;
+     }
+/*---==================================END GLOBAL====================================---*/
+/*---==================================START BUTTON====================================---*/
+.btn-cta{
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    margin: 4rem auto;
+}
+.btn {
+    color: var(--main-color-white);
+    background-color: var(--main-color-blue);
+    border-radius: .8rem;
+    display: inline-block;
+    padding: 0.8rem 1.6rem 0.6rem;
+    text-transform: uppercase;
+    transition: background-color 650ms;   
+}
+.btn:hover{
+    color: var(--main-color-black);
+    background-color: var(--main-color-blue-hover);
+}
+/*---==================================END BUTTON====================================---*/  
+/*---==================================START HEADER====================================---*/
+header{
+    text-align: center;
+    padding: 0.8rem 2rem 0;
+}
+/*---==================================START HEADER-NAV TOGGLE====================================---*/
+.menu{
+    padding: 1.8rem 1.8rem;
+    position: fixed;
+    top: 2.8rem;
+    right: 2.8rem;
+    background-color:var(--main-color-blue-hover);
+    opacity: 70%;
+    z-index: 999;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.menu .bar,
+.menu .bar::before,
+.menu .bar::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 2.8rem;
+    background-color: var(--main-color-black);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: 650ms;
+}
+.menu .bar::before{
+    top: -2rem;
+}
+.menu .bar::after{
+    top: 2rem;
+}
+.active .bar{
+    background: transparent;
+}
+.active .bar::before{
+    transform: rotate(45deg);
+}
+.active .bar::after{
+    transform: rotate(-45deg);
+}
+.active .bar::before,
+.active .bar::after{
+    top: 0;
+}
+/*---==================================END HEADER-NAV TOGGLE====================================---*/
+/*---==================================START HEADER-NAV====================================---*/
+#logo{
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: 300;
+    border-bottom: 1px solid var(--main-color-black);
+    margin-bottom: -5px;
+}
+.nav{
+    width: 100%;
+    height: 6rem;
+    line-height: 6rem;
+    position: relative;
+}
+.overlay{
+    background-color: var(--main-color-blue);
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: opacity 650ms;
+    transform: scale(0);
+    opacity: 0;
+}
+.overlay.menu-open{
+    transform: scale(1);
+    opacity: 1;
+}
+.nav .overlay ul{
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.nav .overlay ul li{
+    text-transform: uppercase;
+}
+.nav .overlay ul li a{
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+    display: block;
+    transition: all 650ms;
+}
+.nav .overlay ul li a:hover,
+.nav .overlay ul li a .active:hover{
+    color: var(--main-color-blue-hover);
+}
+/*---==================================END HEADER-NAV====================================---*/
+/*---==================================END HEADER====================================---*/
+/*---==================================START BERANDA====================================---*/
+
+/*---==================================END BERANDA====================================---*/
+/*---==================================STAR JASA====================================---*/
+.jasa{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 4rem;
+}
+.jasa1{
+    width: 31rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 1rem; 
+}
+.img-jasa{
+    width: 50%;
+    margin: 1rem auto;
+}
+.keterangan{
+    padding-bottom: 1rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+/*---==================================END JASA====================================---*/
+/*---==================================START PORTFOLIO====================================---*/
+.portofolio{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 4rem;
+}
+.portofolio1{
+    width: 31rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 1rem; 
+}
+.img-portofolio{
+    width: 90%;
+    margin: 1rem auto;
+}
+.ket-portofolio{
+    padding-bottom: 1rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+/*---==================================END PORTFOLIO====================================---*/
+/*---==================================START CONTACT====================================---*/
+form {
+    width: 80%;
+    margin: 4rem auto;
+    text-align: left;
+}
+label{
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    color:var(--main-font-heading);
+}  
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    outline-color:var(--main-color-blue-hover);
+    background-color: var(--main-color-gray);
+}
+      
+input[type="submit"] {
+    width: initial;
+    background-color: var(--main-color-blue);
+    color: var(--main-color-white);
+    border-radius: .8rem;
+    cursor: pointer;
+    transition: background-color 650ms;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    padding: 0.8rem 1.6rem 0.6rem;
+    text-transform: uppercase;
+    }
+input[type="submit"]:hover {
+    color: var(--main-color-black);
+    background-color: var(--main-color-blue-hover);
+    }
+/*---==================================END CONTACT====================================---*/      
+/*---==================================START PROFILE====================================---*/
+.card-header{
+    text-align: center;
+    display: block;
+}
+.img-profile{
+    display: inline-block;
+    padding: 0.8rem;
+    background: var(--main-color-white);
+    margin: auto;
+    border-radius: 50%;
+}
+.img-profile img{
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+.heading-card h1{
+   font-size: 2.4rem;
+   margin: 2rem auto;
+   padding-bottom: 2rem;
+   color: var(--main-color-white);
+}
+.nama{
+    font-size: 2.8rem;
+    font-weight: 300;
+    margin: 1rem auto;
+    color: var(--main-color-white);
+
+}
+.deskripsi{
+    font-size: 1.4rem;
+    color: var(--main-color-white);
+}
+.nav-list {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.nav-list li{
+    margin: 0 1rem;
+}
+.sosial-media {
+    margin-top: 4rem;
+}
+    .sosial-media i {
+      font-size: 4rem;
+      transition: color 650ms;
+      color: var(--main-color-white); 
+    }
+  .fa-facebook-square:hover {
+    color: #4267b2; 
+}
+ 
+  .fa-instagram:hover {
+    color: #e2d84c; 
+}
+  .fa-dribbble-square:hover {
+    color: #d12424; 
+}
+/*---==================================END PROFILE====================================---*/
+/*---==================================START FOOTER====================================---*/
+.background-footer{
+    width: 100%;
+    text-align: center;
+    background-color: var(--main-color-black);
+    padding: 1rem 0;
+}
+.background-footer p {
+    color: var(--main-color-white);
+    text-transform: uppercase;
+}
+.up {
+    position: fixed;
+    width: 5rem;
+    height: 5rem;
+    background-color:var(--main-color-blue);
+    bottom: 4rem;
+    right: 3rem;
+    border-radius: 100%;
+    display: flex;
+    -webkit-animation: pulse 2s infinite;
+            animation: pulse 2s infinite;
+    cursor: pointer; 
+}
+    .up i {
+      color: var(--main-color-black);
+      font-size: 2rem;
+      margin: auto;
+    }
+    .up p {
+      font-size: 1.4rem; 
+    }
+      @-webkit-keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(87, 242, 253, 0.99); }
+        70% {
+          box-shadow: 0 0 0 2rem rgba(253, 87, 191, 0); }
+        100% {
+          box-shadow: 0 0 0 0 rgba(128, 78, 109, 0); } }
+      
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(2, 247, 255, 0.99); }
+        70% {
+          box-shadow: 0 0 0 2rem rgba(253, 87, 191, 0); }
+        100% {
+          box-shadow: 0 0 0 0 rgba(128, 78, 109, 0); } }
+      
+/*---==================================END FOOTER====================================---*/
+
+/*---======================START MEDIA QUERY MIN-WIDTH 425PX==========================---*/
+@media screen and (min-width: 425px) {
+   #beranda{
+       width: 90%;
+   }
+}
+/*---======================END MEDIA QUERY MIN-WIDTH 425PX==========================---*/
+/*---======================START MEDIA QUERY MIN-WIDTH 768PX==========================---*/
+@media screen and (min-width: 768px) {
+    header{
+        background-attachment: fixed;
+        }
+    .menu{
+        display: none;
+        }
+    .nav{
+        display: flex;
+        padding: 2rem 10rem 0;
+        justify-content: space-between;
+        }
+    #logo{
+        display: block;
+        }
+    .nav .overlay{
+        position: initial;
+        background: none;
+        opacity: initial;
+        transform: initial;
+        }
+    .nav .overlay ul{
+        flex-direction: row;
+        list-style: none;
+        margin-top: 2px;
+        }
+    .nav .overlay ul li a{
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        margin-right: -1px;
+        padding: 0 2rem;
+        }
+    .jasa1{
+        width: 30%;
+    }
+    #beranda{
+        display: flex;
+    }
+    .img-beranda img{
+        margin: 4rem;
+        width: 20rem;
+    }
+}
+/*---=====================END MEDIA QUERY MIN-WIDTH 768PX==========================---*/
+/*---======================START MEDIA QUERY MIN-WIDTH 1024PX==========================---*/
+@media screen and (min-width: 1024px) {
+    main {
+        overflow: auto;
+         }
+    #content {
+        float: right;
+        width: 80%;
+         }
+    aside {
+        float: left;
+        width: 20%;
+        height: 250rem;
+        background-color: var(--main-color-blue);
+         }
+    #beranda{
+        display: flex;
+    }
+    .portofolio1{
+        width: 22%;
+    }
+    .img-beranda img{
+        margin: 4rem;
+        width: 20rem;
+    }
+}
+/*---======================END MEDIA QUERY MIN-WIDTH 1024PX==========================---*/
